@@ -1,6 +1,6 @@
 # AffectedByDestroy
 
-TODO: Write a gem description
+Based on https://github.com/murbanski/affected_on_destroy.
 
 ## Installation
 
