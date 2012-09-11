@@ -1,0 +1,1 @@
+require 'affected_by_destroy'
