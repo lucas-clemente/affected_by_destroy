@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["luke.clemente@gmail.com"]
   gem.description   = %q{Rails plugin showing which related records will be deleted from DB when :dependent => :destroy is used}
   gem.summary       = %q{Rails plugin showing which related records will be deleted from DB when :dependent => :destroy is used}
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/lucas-clemente/affected_by_destroy"
 
   gem.files         = `git ls-files`.split($/)
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})

@@ -17,8 +17,7 @@ describe AffectedByDestroy do
   it 'shows belongs_to objects' do
     u = User.create
     b = Blog.create user: u
-    p = Post.create blog: b
-    u.affected_by_destroy.should == [u, b, p]
+    b.affected_by_destroy.should == [b, u]
   end
 
   it 'works with self-joining classes' do
