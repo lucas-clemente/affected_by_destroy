@@ -1,6 +1,6 @@
 require "affected_by_destroy/version"
 
-module AffectedByDestroy
+class ActiveRecord::Base
   def affected_by_destroy(affected = [])
     affected << self
     self.class.reflect_on_all_associations.select {|a| a.options[:dependent] == :destroy}.each do |assoc|
@@ -19,5 +19,3 @@ module AffectedByDestroy
     affected.uniq
   end
 end
-
-ActiveRecord::Base.send :include, AffectedByDestroy
