@@ -1,8 +1,8 @@
 require "affected_by_destroy/version"
 
 module AffectedByDestroy
-  def affected_by_destroy(already_affected = [])
-    affected = [self] + already_affected
+  def affected_by_destroy(affected = [])
+    affected << self
     self.class.reflect_on_all_associations.select {|a| a.options[:dependent] == :destroy}.each do |assoc|
       assoc_result = self.send(assoc.name)
       next if assoc_result.blank?
